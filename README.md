@@ -5,9 +5,9 @@ Este teste é desenvolvido pela [Qesh](https://www.linkedin.com/company/qesh-pay
 
 ## **Instruções**
 
-Você deverá criar um `fork` deste repositório. Nesse fork, você encontrará a pasta `project`. Nessa pasta terá um projeto base que deve ser usado para o teste.
+Você desenvolverá um aplicativo de criação perfil de usuário, que exibirá suas informações básicas e que poderão ser editáveis posteriormente.
 
-Você terá 48h para finalizar o teste e caso esse prazo não seja cumprido, a candidatura não será mais acompanhada pela Qesh.
+A informações deverão ser mokadas, ou seja, não deverão ser obtidas de um banco de dados.
 
 ## **Sobre o teste**
 
