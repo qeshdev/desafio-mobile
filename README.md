@@ -2,15 +2,14 @@
 
 Este teste é desenvolvido pela [Qesh](https://www.linkedin.com/company/qesh-payments/) e tem como objetivo avaliar tecnicamente o candidato para a vaga de Front-End.
 
-
 ## **Instruções**
 
-Você deverá criar um `fork` deste repositório. Nesse fork, você encontrará a pasta `project`. 
+Você deverá criar um `fork` deste repositório. Nesse fork, você encontrará a pasta `project`.
 Todo o código fonte deve ser colocado dentro da pasta `project`.
 
 O repositório deverá ser público e não poderá ter nenhuma menção à Qesh.
 
-Você terá **48h** para realizar o teste, consideraremos até onde você conseguir chegar com o código.
+Você terá **96h** para realizar o teste, consideraremos até onde você conseguir chegar com o código.
 
 > Lembrando que não é necessária a conclusão do teste para envio do código.
 
@@ -20,7 +19,11 @@ Ao finalizar, responda o email referente ao teste com o link do seu repositório
 
 Você desenvolverá um aplicativo de criação perfil de usuário, que exibirá suas informações básicas e que poderão ser editáveis posteriormente.
 
-A informações deverão ser mokadas, ou seja, não deverão ser obtidas de um banco de dados.
+Para isso será ultilizada uma api RESTful, que será responsável por armazenar os dados do usuário e também por retorna-los.
+
+O swagger está disponível neste [link](https://api-desafio-front.dev.qesh.ai/docs/)
+
+> Você receberá um login e senha no corpo do email, que será utilizado para buscar as informações do usuário.
 
 ## **Layout do projeto**
 
