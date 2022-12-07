@@ -21,7 +21,7 @@ Para isso será ultilizada uma api RESTful, que será responsável por armazenar
 
 O swagger está disponível neste [link](https://desafio.pw1.develop.us-east-1.qesh.ai/docs/)
 
-> Você receberá um login e senha no corpo do email, que será utilizado para buscar as informações do usuário.
+> Para realizar o login, precisará usar o endpoind de cadastro
 
 ## **Layout do projeto**
 
