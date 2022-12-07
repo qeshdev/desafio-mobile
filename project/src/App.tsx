@@ -8,7 +8,8 @@ const App: React.FC = () => {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
-      }}>
+      }}
+    >
       <Image source={require('./assets/logo.png')} />
     </View>
   )
