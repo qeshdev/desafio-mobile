@@ -19,7 +19,7 @@ Você desenvolverá um aplicativo de criação perfil de usuário, que exibirá 
 
 Para isso será ultilizada uma api RESTful, que será responsável por armazenar os dados do usuário e também por retorna-los.
 
-O swagger está disponível neste [link](https://api-desafio-front.dev.qesh.ai/docs/)
+O swagger está disponível neste [link](https://desafio.pw1.develop.us-east-1.qesh.ai/docs/)
 
 > Você receberá um login e senha no corpo do email, que será utilizado para buscar as informações do usuário.
 
