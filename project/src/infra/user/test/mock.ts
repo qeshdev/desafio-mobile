@@ -1,4 +1,6 @@
-export const userResponse = {
+import { getUserResponse } from '@/domain/protocols/user'
+
+export const userResponse: getUserResponse = {
   id: '625432a68ef18aa8411de18f',
   createdAt: '2022-04-11T13:52:38.743Z',
   updatedAt: '2022-04-11T13:52:38.743Z',

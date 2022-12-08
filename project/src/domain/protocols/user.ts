@@ -1,7 +1,7 @@
 export interface getUserResponse {
   id: string
-  createdAt: Date
-  updatedAt: Date
+  createdAt: string
+  updatedAt: string
   email: string
   name: string
   phone: string
