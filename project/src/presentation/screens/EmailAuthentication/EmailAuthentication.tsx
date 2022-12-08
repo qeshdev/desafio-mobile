@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { StatusBar, ToastAndroid } from 'react-native'
 
-import { getUser } from '../../../infra/user/user'
+import { user } from '../../../infra/user/user'
 import { Input } from '../../components/Input'
 import { emailValidation } from '../../utils/string'
 import { Container, EmailContainer, ImageStyled, ImageContainer, BottomImage } from './EmailAuthentication.styles'
 
 const EmailAuthentication: React.FC = ({ navigation }: any) => {
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState<string>('')
 
   const setToastMessage = (message: string) => {
     ToastAndroid.showWithGravity(message, ToastAndroid.LONG, ToastAndroid.CENTER)
@@ -17,7 +17,7 @@ const EmailAuthentication: React.FC = ({ navigation }: any) => {
     const emailIsValid = emailValidation(email)
 
     if (emailIsValid) {
-      const authenticateUser = await getUser(email)
+      const authenticateUser = await user(email)
 
       if (authenticateUser) {
         navigation.navigate('Login', { email })
