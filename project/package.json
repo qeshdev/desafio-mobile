@@ -14,6 +14,8 @@
     "prepare": "cd .. && husky install project/.husky"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.0",
+    "@react-navigation/native-stack": "^6.9.5",
     "axios": "^1.2.1",
     "react": "17.0.2",
     "react-native": "0.66.4"
