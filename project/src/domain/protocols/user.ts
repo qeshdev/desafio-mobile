@@ -1,4 +1,4 @@
-export interface getUser {
+export interface getUserResponse {
   id: string
   createdAt: Date
   updatedAt: Date
@@ -12,8 +12,12 @@ export interface getUser {
   refresh_token: string
 }
 
-export interface User {
+export interface UserResponse {
   color: string
+  photo: string
+}
+
+export interface BodyParams {
   photo: string
 }
 
@@ -21,5 +25,5 @@ export interface UserUpdate {
   name: string
   phone: string
   color: string
-  natiolality: string
+  nationality: string
 }
