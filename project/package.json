@@ -28,6 +28,7 @@
     "@commitlint/config-conventional": "^17.3.0",
     "@faker-js/faker": "^7.6.0",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/react-native": "^11.5.0",
     "@types/jest": "^29.2.4",
     "@types/react-native": "^0.66.4",
     "@types/react-test-renderer": "^17.0.1",
