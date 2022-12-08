@@ -8,6 +8,7 @@ export interface InputProps {
   placeholder: string
   secureText: boolean
   onChangeText: (text: string) => void
+  onSubmitEditing: () => void
 }
 
 /**
@@ -18,10 +19,11 @@ export interface InputProps {
  * @param placeholder     The placeholder of the input
  * @param secureText      The boolean to show or hide the password
  * @param onChangeText    The function to be called when the input text is changes
+ * @param onSubmitEditing The function to be called when the input text is submitted
  */
 
 const Input: React.FC<InputProps> = (props: InputProps) => {
-  const { label, value, placeholder, secureText, onChangeText } = props
+  const { label, value, placeholder, secureText, onChangeText, onSubmitEditing } = props
 
   return (
     <Container>
@@ -33,6 +35,8 @@ const Input: React.FC<InputProps> = (props: InputProps) => {
         keyboardType={'default'}
         testID="StyledInput/Input"
         onChangeText={onChangeText}
+        returnKeyType="next"
+        onSubmitEditing={onSubmitEditing}
       />
     </Container>
   )
