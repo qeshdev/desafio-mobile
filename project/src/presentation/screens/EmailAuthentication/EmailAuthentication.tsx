@@ -1,18 +1,15 @@
 import React, { useState } from 'react'
-import { StatusBar, ToastAndroid } from 'react-native'
+import { StatusBar } from 'react-native'
 
 import { getUserResponse } from '../../../domain/protocols/user'
 import { getUser } from '../../../infra/user/user'
+import { setToastMessage } from '../../../presentation/utils/toastNative'
 import { Input } from '../../components/Input'
 import { emailValidation } from '../../utils/string'
 import { Container, EmailContainer, ImageStyled, ImageContainer, BottomImage } from './EmailAuthentication.styles'
 
 const EmailAuthentication: React.FC = ({ navigation }: any) => {
   const [email, setEmail] = useState<string>('')
-
-  const setToastMessage = (message: string) => {
-    ToastAndroid.showWithGravity(message, ToastAndroid.LONG, ToastAndroid.CENTER)
-  }
 
   const handleEmailValidate = async (): Promise<void> => {
     const emailIsValid = emailValidation(email)

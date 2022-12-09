@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { StatusBar, ToastAndroid } from 'react-native'
+import { StatusBar } from 'react-native'
 
 import { UserResponse } from '../../../domain/protocols/user'
 import { authenticateUser } from '../../../infra/authentication-remote/authentication-remote'
 import { user } from '../../../infra/user/user'
+import { setToastMessage } from '../../../presentation/utils/toastNative'
 import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
 import {
@@ -22,10 +23,6 @@ const Login: React.FC = ({ navigation, route }: any) => {
   const [email, setEmail] = useState<string>(EmailAuthenticated)
   const [password, setPassword] = useState<string>('')
   const [userInfo, setUserInfo] = useState<UserResponse | null>(null)
-
-  const setToastMessage = (message: string) => {
-    ToastAndroid.showWithGravity(message, ToastAndroid.LONG, ToastAndroid.CENTER)
-  }
 
   const handleLogin = async (): Promise<void> => {
     const authUser = await authenticateUser({ email, password })
