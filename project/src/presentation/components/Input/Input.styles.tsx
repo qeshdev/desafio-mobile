@@ -13,5 +13,7 @@ export const StyledInput = styled.TextInput`
   border: 1px solid gray;
   border-radius: 8px;
   font-size: 16px;
-  padding: 12px 16px;
+  width: 350px;
+  height: 55px;
+  padding: 6px 12px;
 `

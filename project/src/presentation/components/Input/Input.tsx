@@ -8,7 +8,7 @@ export interface InputProps {
   placeholder: string
   secureText: boolean
   onChangeText: (text: string) => void
-  onSubmitEditing: () => void
+  onSubmitEditing?: () => void
 }
 
 /**
