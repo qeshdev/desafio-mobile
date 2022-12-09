@@ -56,8 +56,8 @@ const Login: React.FC = ({ navigation, route }: any) => {
 
   return (
     <Container>
-      <StatusBar backgroundColor={userInfo ? userInfo.color : '#42C1C7'} barStyle="light-content" />
-      <Header colorUser={userInfo ? userInfo.color : '#42C1C7'} />
+      <StatusBar backgroundColor={userInfo?.color || '#42C1C7'} barStyle="light-content" />
+      <Header colorUser={userInfo?.color || '#42C1C7'} />
       <UserImageContainer>
         <UserImage source={userInfo ? { uri: userInfo.photo } : require('../../../assets/no-photo.png')} />
       </UserImageContainer>
@@ -80,7 +80,7 @@ const Login: React.FC = ({ navigation, route }: any) => {
         />
       </PasswordContainer>
       <ButtonContainer>
-        <Button onClick={handleLogin} label="Logar" />
+        <Button color={userInfo?.color || '#42C1C7'} onClick={handleLogin} label="Logar" />
       </ButtonContainer>
     </Container>
   )
