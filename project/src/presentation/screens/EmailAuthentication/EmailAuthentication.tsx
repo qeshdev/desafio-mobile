@@ -11,6 +11,11 @@ import { Container, EmailContainer, ImageStyled, ImageContainer, BottomImage } f
 const EmailAuthentication: React.FC = ({ navigation }: any) => {
   const [email, setEmail] = useState<string>('')
 
+  /**
+   * @description
+   * This function is responsible for validating the email
+   * and navigating to the login screen
+   */
   const handleEmailValidate = async (): Promise<void> => {
     const emailIsValid = emailValidation(email)
 

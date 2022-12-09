@@ -24,6 +24,11 @@ const Login: React.FC = ({ navigation, route }: any) => {
   const [password, setPassword] = useState<string>('')
   const [userInfo, setUserInfo] = useState<UserResponse | null>(null)
 
+  /**
+   * @description
+   * This function is responsible for authenticating the user
+   * and navigating to the home screen
+   */
   const handleLogin = async (): Promise<void> => {
     const authUser = await authenticateUser({ email, password })
     if (email === 'marcus@quesh.ia' && password === '12345') {
@@ -39,6 +44,11 @@ const Login: React.FC = ({ navigation, route }: any) => {
     navigation.navigate('Home', { email })
   }
 
+  /**
+   * @description
+   * This function is responsible for getting the user's information
+   * and setting it in the state
+   */
   useEffect(() => {
     const authEmail = async () => {
       const getUserInfos = await user(email)
