@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { StatusBar, ToastAndroid } from 'react-native'
 
-import { user } from '../../../infra/user/user'
+import { getUserResponse } from '../../../domain/protocols/user'
+import { getUser } from '../../../infra/user/user'
 import { Input } from '../../components/Input'
 import { emailValidation } from '../../utils/string'
 import { Container, EmailContainer, ImageStyled, ImageContainer, BottomImage } from './EmailAuthentication.styles'
@@ -13,14 +14,16 @@ const EmailAuthentication: React.FC = ({ navigation }: any) => {
     ToastAndroid.showWithGravity(message, ToastAndroid.LONG, ToastAndroid.CENTER)
   }
 
-  const handleLogin = async (): Promise<void> => {
+  const handleEmailValidate = async (): Promise<void> => {
     const emailIsValid = emailValidation(email)
 
     if (emailIsValid) {
-      const authenticateUser = await user(email)
+      const authenticateUser = (await getUser(email)) as getUserResponse
 
-      if (authenticateUser) {
+      if (authenticateUser.email) {
         navigation.navigate('Login', { email })
+      } else {
+        setToastMessage('E-mail não cadastrado')
       }
     } else {
       setToastMessage('E-mail inválido')
@@ -42,7 +45,7 @@ const EmailAuthentication: React.FC = ({ navigation }: any) => {
           onChangeText={value => setEmail(value)}
           value={email}
           secureText={false}
-          onSubmitEditing={handleLogin}
+          onSubmitEditing={handleEmailValidate}
         />
       </EmailContainer>
       <BottomImage source={require('../../../assets/login-email-purple.png')} />
