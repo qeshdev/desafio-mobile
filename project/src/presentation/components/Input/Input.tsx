@@ -7,6 +7,7 @@ export interface InputProps {
   value: string
   placeholder: string
   secureText: boolean
+  disabled?: boolean
   onChangeText: (text: string) => void
   onSubmitEditing?: () => void
 }
@@ -18,15 +19,16 @@ export interface InputProps {
  * @param value           The value of the input
  * @param placeholder     The placeholder of the input
  * @param secureText      The boolean to show or hide the password
+ * @param disabled        The boolean to disable the input
  * @param onChangeText    The function to be called when the input text is changes
  * @param onSubmitEditing The function to be called when the input text is submitted
  */
 
 const Input: React.FC<InputProps> = (props: InputProps) => {
-  const { label, value, placeholder, secureText, onChangeText, onSubmitEditing } = props
+  const { label, value, placeholder, disabled, secureText, onChangeText, onSubmitEditing } = props
 
   return (
-    <Container>
+    <Container pointerEvents={disabled ? 'box-none' : 'none'}>
       <Label>{label}</Label>
       <StyledInput
         value={value}
