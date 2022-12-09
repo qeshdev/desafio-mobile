@@ -28,7 +28,7 @@ const Input: React.FC<InputProps> = (props: InputProps) => {
   const { label, value, placeholder, disabled, secureText, onChangeText, onSubmitEditing } = props
 
   return (
-    <Container pointerEvents={disabled ? 'box-none' : 'none'}>
+    <Container pointerEvents={disabled ? 'none' : 'box-none'}>
       <Label>{label}</Label>
       <StyledInput
         value={value}
