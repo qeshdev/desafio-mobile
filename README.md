@@ -19,7 +19,7 @@ Você desenvolverá um aplicativo de criação perfil de usuário, que exibirá 
 
 Para isso será ultilizada uma api RESTful, que será responsável por armazenar os dados do usuário e também por retorna-los.
 
-O swagger está disponível neste [link](https://desafio.pw1.develop.us-east-1.qesh.ai/docs/)
+A especificação OpenAPI será encaminhada via email junto com as credenciais de acesso.
 
 > Para realizar o login, precisará usar o endpoind de cadastro
 
